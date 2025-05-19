@@ -33,12 +33,7 @@ It allows users to submit a long URL and receive a shortened version in return.
   npm install
   ```
 
-3. Create a .env file:
-  ```bash
-  VITE_API_BASE_URL=http://localhost:3000 (or the port you use for backend)
-  ```
-
-4. Start the dev server:
+3. Start the dev server:
   ```bash
   npm run dev
   ```
@@ -50,3 +45,18 @@ The frontend expects a backend running at VITE_API_BASE_URL with endpoints like:
   - POST /short_urls to create a shortened URL
 
   - GET /top_urls to list most popular URLs (optional)
+
+## 🔁 Local Proxy Setup (for Development)
+
+The React frontend (Vite) is already configured to proxy API requests to the backend.
+
+✅ Make sure the backend is running at http://localhost:3000 when developing locally.
+
+The frontend will automatically forward API requests (like /short_urls) to that backend.
+
+
+## Production Setup
+
+In production, the frontend must be built using `vite build` and served alongside the backend.
+
+API requests will work as expected if both frontend and backend are served from the same origin.

@@ -11,5 +11,13 @@ export default defineConfig({
       '@hooks': path.resolve(__dirname, './src/hooks'),
       '@assets': path.resolve(__dirname, './src/assets')
     }
-  }
+  },
+  server: {
+    proxy: {
+      '/short_urls': {
+        target: 'http://localhost:3000',
+        changeOrigin: true,
+      }
+    },
+  },
 });
