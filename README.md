@@ -25,7 +25,7 @@ It allows users to submit a long URL and receive a shortened version in return.
 1. Clone the repo:
   ```bash
   git clone git@github.com:SegundoRP/url-shortener-frontend.git
-  cd your-repo-name
+  cd url-shortener-frontend
   ```
 
 2. Install dependencies:
