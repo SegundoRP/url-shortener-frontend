@@ -1,7 +1,5 @@
-import { API_BASE_URL } from '@/config'
-
 export async function createShortUrl(fullUrl) {
-  const response = await fetch(`${API_BASE_URL}/short_urls`, {
+  const response = await fetch(`/short_urls`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { API_BASE_URL } from '@/config'
 
 export function useTopUrls() {
   const [urls, setUrls] = useState([]);
@@ -9,7 +8,7 @@ export function useTopUrls() {
   useEffect(() => {
     const fetchUrls = async () => {
       try {
-        const response = await fetch(`${API_BASE_URL}/short_urls`);
+        const response = await fetch(`/short_urls`);
         if (!response.ok) throw new Error('Error fetching top URLs');
         const data = await response.json();
         setUrls(data.urls);
